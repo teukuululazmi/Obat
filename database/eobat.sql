@@ -133,8 +133,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`name`,`email`,`email_verified_at`,`password`,`remember_token`,`created_at`,`updated_at`) values 
-(1,'Teuku Ulul Azmi','t.ululazmi@gmail.com',NULL,'$2y$10$SNfXtTMJJxjH9jJJuhRdGeQiz6RTvI9eV5/XyC.OEVAgJ3PyRHrQu',NULL,'2022-10-22 04:53:00','2022-10-22 04:53:00'),
-(2,'Tawakal Saputra','tawakals33v@gmail.com',NULL,'$2y$10$9zhVh3LFg/3zXYpeaDUwsuvOzn3GL55kbwBkH6u3S0GWDXb1WJcvO',NULL,'2022-10-22 05:13:16','2022-10-22 05:13:16');
+(1,'Teuku Ulul Azmi','t.ululazmi@gmail.com',NULL,'$2y$10$SNfXtTMJJxjH9jJJuhRdGeQiz6RTvI9eV5/XyC.OEVAgJ3PyRHrQu',NULL,'2022-10-22 04:53:00','2022-10-22 04:53:00');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
