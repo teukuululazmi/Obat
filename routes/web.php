@@ -20,8 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 //dahsboard
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//Obat
-Route::get('/obat', [App\Http\Controllers\Obat\ObatController::class, 'index'])->name('obat');
-Route::post('/obatPost', [App\Http\Controllers\Obat\ObatController::class, 'obatPost'])->name('obatPost');
-Route::patch('/obatUpdate/{id}', [App\Http\Controllers\Obat\ObatController::class, 'obatUpdate'])->name('obatUpdate');
-Route::get('/obatDelete/{id}', [App\Http\Controllers\Obat\ObatController::class, 'obatDelete'])->name('obatDelete');
+Route::group(['middleware' => ['auth']], function () {
+    //Obat
+    Route::get('/obat', [App\Http\Controllers\Obat\ObatController::class, 'index'])->name('obat');
+    Route::post('/obatPost', [App\Http\Controllers\Obat\ObatController::class, 'obatPost'])->name('obatPost');
+    Route::patch('/obatUpdate/{id}', [App\Http\Controllers\Obat\ObatController::class, 'obatUpdate'])->name('obatUpdate');
+    Route::get('/obatDelete/{id}', [App\Http\Controllers\Obat\ObatController::class, 'obatDelete'])->name('obatDelete');
+});
